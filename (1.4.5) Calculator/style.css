@@ -1,0 +1,47 @@
+body {
+	padding: 20px;
+	text-align: center ;
+	background-color: #222222;
+}
+#widget {
+	width: 60px;
+	background-color: #5a5a5a;
+	margin: auto ;
+	padding: 10px;
+}
+
+#firstNumber,#secondNumber{
+	height: 50px;
+	width: 50px;
+	margin: 10px ;
+	background-color: #fff;
+	color: #000000;
+	text-align: center;
+	line-height: 100px;
+	font-size: 35px;
+}
+#result{
+	height: 100px;
+	width: 120px;
+	margin: 0 auto ;
+	background-color: #fff;
+	color: #000000;
+	text-align: center;
+	line-height: 100px;
+	font-size: 70px;
+}
+#add,#sub,#mul,#div,#mod {
+	height: 50px;
+	width: 50px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	line-height: 10px;
+	font-size: 20px;
+}
+#add:hover,#sub:hover,#mul:hover,#div:hover,#mod:hover,#mod:hover {
+cursor:pointer;
+background-color: #ffffff;
+color: #000000;
+}
+
