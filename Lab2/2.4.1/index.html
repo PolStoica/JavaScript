@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.4.1 </title>
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Problema 2.4.1</h1>
+        
+        <div class="input-container">
+            <label for="message-input">Mesaj:</label>
+            <input id="message-input" type="text" v-model="message" placeholder="Enter text here">
+        </div>
+        <button @click="processMessage">Process</button>
+        <p v-if="outputMessage" class="output-message">
+            {{ outputMessage }}
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

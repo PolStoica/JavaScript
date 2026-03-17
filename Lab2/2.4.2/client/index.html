@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Users manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="libs/vue/vue.js"></script>
+    <script type="text/javascript" src="libs/axios/axios.js"></script>
+    <script type="text/javascript" src="users.js"></script>
+</head>
+
+<body>
+<div id="app">
+
+    <!-- LISTA USERILOR -->
+    <ul class="user-list">
+        <li v-for="(user, index) in users">
+            <div class="user-row">
+                <div class="user-name"><b>{{ user.name }}</b></div>
+                <div class="user-city"><i>{{ user.city }}</i></div>
+                <button @click="deleteUser(index)">Șterge</button>
+                <button @click="editIndex = index; editName = user.name; editCity = user.city">Editează</button>
+            </div>
+        </li>
+    </ul>
+
+    <!-- FORMULAR ADĂUGARE -->
+    <div class="form-row">
+        <input v-model="newName" placeholder="Nume">
+        <input v-model="newCity" placeholder="Oraș">
+        <button @click="addUser()">Adaugă</button>
+    </div>
+
+    <!-- FORMULAR EDITARE (apare doar când apeși Editează) -->
+    <div v-if="editIndex != null" class="form-row">
+        <input v-model="editName">
+        <input v-model="editCity">
+        <button @click="updateUser(editIndex)">Salvează</button>
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+
+</html>
